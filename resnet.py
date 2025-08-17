@@ -120,7 +120,7 @@ def main():
         if epoch + 1 >= 5 and r2 > best_r2:
             best_r2 = r2
             torch.save(model.state_dict(), best_model_path)
-            print(f"✅ Saved new best model at epoch {epoch+1} (R2: {r2:.4f}, MAE: {mae:.4f})")
+            print(f"Saved new best model at epoch {epoch+1} (R2: {r2:.4f}, MAE: {mae:.4f})")
 
 
     test_loss, y_true, y_pred = eval_model(model, test_loader, criterion)
